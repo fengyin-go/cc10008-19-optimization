@@ -1,0 +1,257 @@
+/* 查询工作台专用样式：复用全局按钮与表格基调，补充双栏会话、徽标与告警样式。 */
+.workbench .page-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.version-tag {
+  font-size: 12px;
+  color: var(--muted);
+  background: #eef2f7;
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+.session-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  align-items: start;
+}
+.session-panel {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  min-width: 0;
+}
+.session-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.session-head h3 {
+  margin: 0;
+  font-size: 15px;
+}
+.session-id {
+  font-size: 12px;
+  color: var(--muted);
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 10px;
+}
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--muted);
+  min-width: 0;
+}
+.form-item input,
+.form-item select {
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+  color: #1f2937;
+}
+.form-item:nth-child(3),
+.form-item:nth-child(4) {
+  grid-column: span 2;
+}
+.field-order-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.field-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #eef2f7;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12px;
+  color: #1f2937;
+}
+.field-chip .link {
+  font-size: 12px;
+}
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+.alert {
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 12px;
+  margin: 8px 0;
+}
+.alert ul {
+  margin: 4px 0 0;
+  padding-left: 18px;
+}
+.alert-warn {
+  background: #fff7ed;
+  border: 1px solid #fdba74;
+  color: #9a3412;
+}
+.alert-error {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #b42318;
+}
+.alert-info {
+  background: #eff6ff;
+  border: 1px solid #93c5fd;
+  color: #1e40af;
+}
+.hint {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 6px 0;
+}
+.pager {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.jump-page {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.jump-page input {
+  width: 72px;
+  padding: 4px 6px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.badge {
+  font-style: normal;
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin-left: 6px;
+  font-size: 11px;
+}
+.badge-warn {
+  background: #fff7ed;
+  color: #9a3412;
+}
+.badge-muted {
+  background: #f1f5f9;
+  color: var(--muted);
+}
+.badge-ok {
+  background: #ecfdf5;
+  color: #047857;
+}
+.result-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.result-meta code,
+.cache-key-cell {
+  word-break: break-all;
+  font-size: 11px;
+}
+.table-wrap {
+  overflow-x: auto;
+  max-height: 320px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.table-wrap .data-table th,
+.table-wrap .data-table td {
+  white-space: nowrap;
+}
+.side-lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+.side-block h4 {
+  margin: 0 0 6px;
+  font-size: 13px;
+}
+.batch-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+}
+.batch-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+.muted {
+  color: var(--muted);
+}
+.status-pill {
+  border-radius: 999px;
+  padding: 1px 8px;
+  font-size: 11px;
+}
+.status-running {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+.status-complete {
+  background: #ecfdf5;
+  color: #047857;
+}
+.status-timeout {
+  background: #fff7ed;
+  color: #c2410c;
+}
+.status-terminated {
+  background: #fef2f2;
+  color: #b42318;
+}
+.cache-inspector {
+  margin-top: 16px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+}
+.inspector-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.inspector-head h3 {
+  margin: 0;
+  font-size: 15px;
+}
+@media (max-width: 1100px) {
+  .session-grid {
+    grid-template-columns: 1fr;
+  }
+}
